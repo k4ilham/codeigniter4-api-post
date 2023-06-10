@@ -19,8 +19,10 @@ class Filters extends BaseConfig
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
+        'options'        => \App\Filters\Options::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        
     ];
 
     /**
@@ -29,6 +31,7 @@ class Filters extends BaseConfig
      */
     public array $globals = [
         'before' => [
+            'options' //register option CORS
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
